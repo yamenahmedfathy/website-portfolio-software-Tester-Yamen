@@ -1,14 +1,13 @@
 @media screen and (max-width: 1400px) {
   #profile {
-    height: 83vh;
-    margin-bottom: 6rem;
+    height: auto;
+    margin-bottom: 4rem;
   }
-  .about-containers {
-    flex-wrap: wrap;
+  .about-containers, .grid-auto, .grid-auto-sm, .grid-auto-xs {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   }
-  #contact,
-  #projects {
-    height: fit-content;
+  #contact, #projects {
+    height: auto;
   }
 }
 
@@ -19,85 +18,53 @@
   #hamburger-nav {
     display: flex;
   }
-  #experience,
-  .experience-details-container {
-    margin-top: 2rem;
+  #experience, .experience-details-container {
+    margin-top: 1.5rem;
   }
-  #profile,
-  .section-container {
-    display: block;
-  }
-  .arrow {
-    display: none;
-  }
-  section,
-  .section-container {
-    height: fit-content;
+  #profile, .section-container {
+    display: flex;
+    flex-direction: column;
   }
   section {
     margin: 0 5%;
   }
   .section__pic-container {
-    width: 275px;
-    height: 275px;
-    margin: 0 auto 2rem;
+    width: 250px;
+    height: 250px;
+    margin: 0 auto 1.5rem;
   }
-  .about-containers {
-    margin-top: 0;
+  .modern-btn, .modern-icon {
+    min-height: 44px; /* WCAG tap target size */
   }
 }
 
 @media screen and (max-width: 600px) {
-  #contact,
-  footer {
-    height: 40vh;
+  #contact, footer {
+    height: auto;
   }
   #profile {
-    height: 83vh;
+    height: auto;
     margin-bottom: 0;
   }
   article {
-    font-size: 1rem;
-  }
-  footer nav {
-    height: fit-content;
-    margin-bottom: 2rem;
-  }
-  .about-containers,
-  .contact-info-upper-container,
-  .btn-container {
-    flex-wrap: wrap;
-  }
-  .contact-info-container {
-    margin: 0;
-  }
-  .contact-info-container p,
-  .nav-links li a {
-    font-size: 1rem;
-  }
-  .experience-sub-title {
-    font-size: 1.25rem;
-  }
-  .logo {
-    font-size: 1.5rem;
+    font-size: 0.9rem;
   }
   .nav-links {
     flex-direction: column;
-    gap: 0.5rem;
-    text-align: center;
+    gap: 0.8rem;
   }
   .section__pic-container {
-    width: auto;
-    height: 46vw;
-    justify-content: center;
+    width: 200px;
+    height: 200px;
   }
-  .section__text__p2 {
-    font-size: 1.25rem;
-  }
-  .title {
+  .title-large {
     font-size: 2rem;
   }
-  .text-container {
-    text-align: justify;
+  .title-medium {
+    font-size: 1.5rem;
+  }
+  .modern-btn, .modern-icon {
+    font-size: 0.85rem;
+    padding: 0.7rem 1.2rem;
   }
 }
