@@ -1,4 +1,4 @@
-        * {
+* {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
@@ -25,6 +25,10 @@
             background: var(--bg-primary);
             overflow-x: hidden;
         }
+
+        html {
+  scroll-behavior: smooth;
+}
 
         /* Navigation */
         .navbar {
@@ -87,6 +91,11 @@
         .nav-link:hover::after {
             width: 100%;
         }
+
+        .nav-link.active {
+  color: var(--primary-color);
+  font-weight: 700;
+}
 
         .hamburger {
             display: none;
@@ -170,6 +179,9 @@
             display: inline-flex;
             align-items: center;
             gap: 0.5rem;
+            background: var(--primary-color);
+            color: white;
+            box-shadow: var(--shadow);
         }
 
         .btn-primary {
@@ -368,18 +380,15 @@
             margin-top: 3rem;
         }
 
-        .project-card {
-            background: var(--bg-card);
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: var(--shadow);
-            transition: all 0.3s ease;
-        }
-
-        .project-card:hover {
-            transform: translateY(-10px);
-            box-shadow: var(--shadow-lg);
-        }
+        .project-card,
+.details-container.color-container {
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.project-card:hover,
+.details-container.color-container:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: var(--shadow-lg);
+}
 
         .project-media {
             width: 100%;
@@ -577,4 +586,10 @@
                 height: 250px;
             }
         }
-  
+
+        #hamburger-nav .menu-links {
+  background: var(--bg-card);
+  border-radius: 20px;
+  box-shadow: var(--shadow-lg);
+  padding: 2rem;
+}
